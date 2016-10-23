@@ -4,6 +4,4 @@ class Team < ApplicationRecord
   has_many :pokemon_groups, dependent: :destroy
   has_many :pokemons, through: :pokemon_groups
 
-  def index
-  end
 end

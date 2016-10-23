@@ -1,8 +1,7 @@
 <h1>Your Teams</h1>
 <%= link_to new_trainer_pokemon_group_path(current_trainer) do %>
-  <button class='button'>New Team</button>
+<button class='button'>New Team</button>
 <% end %>
-
 
 <% @teams.each do |team|%>
 <div class='team-container'>
@@ -20,7 +19,7 @@
     <% end %>
 </div>
 <button class="button danger">
-  <%= link_to 'Release Team', team, method: :delete, data: { confirm: 'Confirm' } %>
+    <%= link_to 'Release Team', team, method: :delete, data: { confirm: 'Confirm' } %>
 </button>
 
 <% end %>

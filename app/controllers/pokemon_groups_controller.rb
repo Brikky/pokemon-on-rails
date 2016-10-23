@@ -8,7 +8,7 @@ class PokemonGroupsController < ApplicationController
   end
 
   def create
-    team = Team.create(trainer_id:current_trainer.id)
+    team = Team.create(trainer_id: current_trainer.id)
     PokemonGroup.create([
                           {
                             pokemon_id: id_from_params_name(1),

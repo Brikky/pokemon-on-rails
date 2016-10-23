@@ -9,13 +9,9 @@ class PokemonsController < ApplicationController
     @element_types = @pokemon_types.map do |type|
       ElementType.find(type[:element_type_id])
     end
-    @strong_against = @element_types.map do |ele|
-      ele.strong_against
-    end
+    @strong_against = @element_types.map(&:strong_against)
     @strong_against.flatten!.uniq!
-    @weak_against = @element_types.map do |ele|
-      ele.weak_against
-    end
+    @weak_against = @element_types.map(&:weak_against)
     @weak_against.flatten!.uniq!
   end
 end

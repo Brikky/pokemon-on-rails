@@ -2,10 +2,10 @@
 
 <%= form_for :trainer, url: '/trainers' do |f| %>
 
-  <div><%= f.text_field :name, placeholder: :name %></div>
-  <div><%= f.text_field :email, placeholder: :email %></div>
-  <div><%= f.password_field :password, placeholder: :password %></div>
-  <div><%= f.password_field :password_confirmation, placeholder: :confirm %></div>
-  <div><%= f.submit "Submit", class: 'button' %></div>
+<div><%= f.text_field :name, placeholder: :name %></div>
+<div><%= f.text_field :email, placeholder: :email %></div>
+<div><%= f.password_field :password, placeholder: :password %></div>
+<div><%= f.password_field :password_confirmation, placeholder: :confirm %></div>
+<div><%= f.submit "Submit", class: 'button' %></div>
 
 <% end %>

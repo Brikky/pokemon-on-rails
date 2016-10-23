@@ -1,5 +1,4 @@
 class TrainersController < ApplicationController
-
   def new
   end
 
@@ -13,7 +12,7 @@ class TrainersController < ApplicationController
     end
   end
 
-private
+  private
 
   def trainer_params
     params.require(:trainer).permit(:name, :email, :password, :password_confirmation)

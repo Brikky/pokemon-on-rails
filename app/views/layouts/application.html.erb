@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pokédex</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class = 'buttons'>
-<% if current_trainer %>
-  <%= link_to "Pokemon", pokemons_path %> |
-  <%= link_to "Your Teams", trainer_pokemon_groups_path(current_trainer) %> |
-  <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
-</div>
-<%= yield %>
+    <head>
+        <title>Pokédex</title>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class='buttons'>
+            <% if current_trainer %>
+            <%= link_to "Pokemon", pokemons_path %>
+            |
+            <%= link_to "Your Teams", trainer_pokemon_groups_path(current_trainer) %>
+            |
+            <%= link_to "Logout", '/logout' %>
+        <% else %>
+            <%= link_to 'Login', '/login' %>
+            |
+            <%= link_to 'Signup', '/signup' %>
+            <% end %>
+        </div>
+        <%= yield %>
 
-</body>
+    </body>
 </html>
