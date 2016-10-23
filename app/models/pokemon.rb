@@ -4,6 +4,4 @@ class Pokemon < ApplicationRecord
 
   has_many :pokemon_groups
   has_many :teams, through: :pokemon_groups
-
-end
 end
