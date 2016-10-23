@@ -2,6 +2,7 @@
 <h3>Select up to 6 Pokémon</h3>
 
 <%= form_tag trainer_pokemon_groups_path do %>
+<div class="results"</div>
 <div><%= text_field_tag :pokemon_name1, nil, placeholder:'pokémon name' %></div>
 <div><%= text_field_tag :pokemon_name2, nil, placeholder:'pokémon name' %></div>
 <div><%= text_field_tag :pokemon_name3, nil, placeholder:'pokémon name' %></div>
@@ -10,3 +11,6 @@
 <div><%= text_field_tag :pokemon_name6, nil, placeholder:'pokémon name' %></div>
 <%= submit_tag 'save team', class: 'button' %>
 <% end %>
+
+
+  
