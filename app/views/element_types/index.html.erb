@@ -1,0 +1,27 @@
+<h1>Pokemon Types</h1>
+
+<% @element_types.each do |ele| %>
+<div class="pokeball">
+
+    <h4><%= ele.name %></h4>
+    <div>
+        <span>Strong Against:
+        </span>
+        <% ele.strong_against.each do |strong| %>
+        <span>
+            <%= strong %>
+        </span>
+        <% end %>
+    </div>
+    <div>
+        <span>Weak Against:
+        </span>
+        <% ele.weak_against.each do |weak| %>
+        <span>
+            <%= weak %>
+        </span>
+        <% end %>
+    </div>
+
+</div>
+<% end %>

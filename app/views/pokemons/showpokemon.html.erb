@@ -1,0 +1,20 @@
+<div class="pokeball">
+    <div>
+        <span><%= @pokemon.name %></span>
+        <span><%= @pokemon.number %></span>
+    </div>
+    <div>
+        <span>Type:</span>
+        <% @pokemon.elements.each do |ele| %>
+        <span><%= ele %></span>
+        <%end%>
+    </div>
+    <div>
+        <span>Found in:</span>
+        <span><%= @pokemon.region %></span>
+    </div>
+    <div>
+    <div>Strong against: <%= @strong_against.to_sentence %></div>
+    <div>Weak against: <%= @weak_against.to_sentence %></div>
+</div>
+</div>

@@ -1,0 +1,17 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/English_Pok%C3%A9mon_logo.svg/2000px-English_Pok%C3%A9mon_logo.svg.png" alt="Pokemon" class="logo">
+<hr>
+
+<% @pokemons.each do |mon| %>
+<%= link_to mon do %>
+<div class="pokeball inline-block">
+    <span><%= mon.name %></span>
+    <span><%= mon.number %></span>
+    <div>
+        <img src=<%= mon.image %> alt=<%= mon.name %> width='150' height='150'>
+      </div>
+      <button class = 'button'>Pokedex</button>
+    </div>
+
+
+<% end %>
+<% end %>

@@ -1,0 +1,2 @@
+module PokemonGroupsHelper
+end
