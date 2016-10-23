@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20161023042338) do
     t.index ["team_id"], name: "index_pokemon_groups_on_team_id", using: :btree
   end
 
+  create_table "pokemon_teams", force: :cascade do |t|
+    t.integer "trainer_id"
+    t.integer "pokemon_id"
+    t.index ["pokemon_id"], name: "index_pokemon_teams_on_pokemon_id", using: :btree
+    t.index ["trainer_id"], name: "index_pokemon_teams_on_trainer_id", using: :btree
+  end
+
   create_table "pokemon_types", force: :cascade do |t|
     t.integer "pokemon_id"
     t.integer "element_type_id"
@@ -64,6 +71,7 @@ ActiveRecord::Schema.define(version: 20161023042338) do
 
   add_foreign_key "pokemon_groups", "pokemons"
   add_foreign_key "pokemon_groups", "teams"
+  add_foreign_key "pokemon_teams", "trainers"
   add_foreign_key "pokemon_types", "element_types"
   add_foreign_key "pokemon_types", "pokemons"
   add_foreign_key "teams", "trainers"
