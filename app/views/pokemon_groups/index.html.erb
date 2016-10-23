@@ -1,1 +1,22 @@
 <h1>Your Teams</h1>
+<%= link_to new_trainer_pokemon_group_path(current_trainer) do %>
+  <button class='button'>New Team</button>
+<% end %>
+
+
+<% @teams.each do |team|%>
+<div class='team-container'>
+    <% team.pokemons.each do |mon| %>
+    <%= link_to mon do %>
+    <div class="pokeball inline-block">
+        <span><%= mon.name %></span>
+        <span><%= mon.number %></span>
+        <div>
+            <img src=<%= mon.image %> alt=<%= mon.name %> width='150' height='150'>
+        </div>
+        <button class='button'>Pokedex</button>
+    </div>
+    <% end %>
+    <% end %>
+</div>
+<% end %>
